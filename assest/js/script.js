@@ -11,7 +11,7 @@ async function getData() {
        
       finalData.forEach((val) => {
 
-        console.log(val.prepTimeMinutes);
+        
         
 
         container.innerHTML += `
@@ -26,22 +26,13 @@ async function getData() {
           <h4 class="recipe_name">${val.name}</h4>
           <p class="pre">ingredients</p>
           <ul class="ingredients">
-            <li>${val.ingredients[0]}</li>
-            <li>${val.ingredients[1]}</li>
-            <li>${val.ingredients[2]}</li>
-            <li>${val.ingredients[3]}</li>
-            <li>${val.ingredients[4]}</li>
-            <li>${val.ingredients[5]}</li>
+        
+          ${val.ingredients.map((val) => `<li>${val}</li>`).join('')}
           </ul>
 
           <p class="instructions_heading">instructions</p>
           <ol class="instructions">
-            <li>${val.instructions[0]}</li>
-            <li>${val.instructions[1]}</li>
-            <li>${val.instructions[2]}</li>
-            <li>${val.instructions[3]}</li>
-            <li>${val.instructions[4]}</li>
-            <li>${val.instructions[5]}</li>
+            ${val.instructions.map((val) => `<li>${val}</li>`).join('')}
          
           </ol>
           <div class="timing_detalis_main">
@@ -56,7 +47,7 @@ async function getData() {
           </div>
 
           <div class="add_to_cart_button_main">
-            <button class="add_to_cart_button" onclick="sendToDataLocalStorage()">SAVE THE RECIPE</button>
+            <button class="add_to_cart_button" onclick="sendToDataLocalStorage('${val.image}','${val.name}','${val.instructions}','${val.ingredients}','${val.prepTimeMinutes}','${val.rating}')">SAVE THE RECIPE</button>
           </div>
         </div>
       </div>
@@ -75,6 +66,15 @@ async function getData() {
 
 getData();
 
-function sendToDataLocalStorage(){
-alert("Data has been sent to local storage");
+let allRecipes =JSON.parse(localStorage.getItem('recipes')) || [];
+
+function sendToDataLocalStorage(image,name,instructions,ingredients,prepTimeMinutes,rating){
+
+  let recipes = {image,name,instructions,ingredients,prepTimeMinutes,rating};
+  allRecipes.push(recipes);
+   alert("Data has been sent to local storage");
+  localStorage.setItem('recipes',JSON.stringify(allRecipes));
+
+console.log(allRecipes);
+
 }
