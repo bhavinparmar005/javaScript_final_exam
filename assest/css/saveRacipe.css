@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    background-repeat: no-repeat;
+  }
+  .heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+.show_save_data_main{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: sticky;
+   top: 0px;
+   left: 0px;
+   z-index: 1;
+  }
+  .save_data_button{
+    width: 250px;
+    height: 50px;
+    /* border: 1px solid black; */
+    margin-right: 10px;
+   
+  }
+  
+  .save_data_button >button{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  .card_main {
+      margin-top: 20px;
+    width: 350px;
+    height: auto;
+    border: 1px solid black;
+  
+    border-radius: 20px;
+    background-color: whitesmoke;
+    overflow: hidden;
+  }
+  .item_img_main {
+    width: 100%;
+    height: 350px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    padding: 8px;
+    overflow: hidden;
+  }
+  .item_img_main > img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  .item_img_main > img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  .recipe_details_main {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    padding: 8px;
+  }
+  .recipe_name {
+    text-align: center;
+  }
+  .pre {
+    margin-top: 5px;
+    text-decoration: underline;
+  }
+  .ingredients {
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+  .ingredients li {
+    font-size: 14px;
+  }
+  
+  .instructions_heading {
+    margin-top: 5px;
+    text-decoration: underline;
+  }
+  .instructions {
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+  .instructions li {
+    font-size: 14px;
+  }
+  
+  .timing_detalis_main {
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .time {
+    width: 40%;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4eb3ccb0;
+    border-radius: 10px;
+  }
+  .cooktime {
+    width: 90%;
+    height: 30px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .rating_main {
+    width: 40%;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4eb3ccb0;
+    border-radius: 10px;
+  }
+  .add_to_cart_button_main{
+      width: 100%;
+      height: 50px;
+      /* border: 1px solid black; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .add_to_cart_button{
+      width: 300px;
+      height: 40px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1px solid black;
+  }

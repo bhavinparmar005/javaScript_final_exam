@@ -18,6 +18,36 @@ body {
   color: white;
 }
 
+.show_save_data_main{
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: sticky;
+ top: 0px;
+ left: 0px;
+ z-index: 1;
+}
+.save_data_button{
+  width: 200px;
+  height: 50px;
+  /* border: 1px solid black; */
+  margin-right: 10px;
+ 
+}
+
+.save_data_button >a>button{
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .container {
   width: 100%;
   height: auto;

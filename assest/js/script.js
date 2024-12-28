@@ -9,8 +9,12 @@ async function getData() {
        let finalData = data.recipes;
        console.log(finalData);
        
+      
+       
+      
       finalData.forEach((val) => {
 
+        // val.ingredients = val.ingredients.split(',');
         
         
 
@@ -70,11 +74,15 @@ let allRecipes =JSON.parse(localStorage.getItem('recipes')) || [];
 
 function sendToDataLocalStorage(image,name,instructions,ingredients,prepTimeMinutes,rating){
 
+  console.log(ingredients);
+  
+
   let recipes = {image,name,instructions,ingredients,prepTimeMinutes,rating};
   allRecipes.push(recipes);
-   alert("Data has been sent to local storage");
+  //  alert("Data has been sent to local storage");
   localStorage.setItem('recipes',JSON.stringify(allRecipes));
+  // window.location.reload();
 
-console.log(allRecipes);
+// console.log(allRecipes);
 
 }
